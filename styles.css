@@ -1,0 +1,133 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.overlay {
+    position: relative; /* Set a relative position for the overlay */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: white; /* Text color */
+    padding: 20px; /* Padding */
+}
+
+.top-right {
+    position: absolute; /* Use absolute positioning */
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    background: rgba(0, 0, 0, 0.5); /* Background for contrast */
+    padding: 10px; /* Padding for the rating box */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.quote {
+    text-align: center;
+    font-size: 16px;
+}
+
+.input-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.input-section input {
+    padding: 8px;
+    margin: 5px;
+}
+
+.input-section button {
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+.overlay {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.quote {
+    font-size: 1.5em;
+}
+
+.controls {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.controls button {
+    padding: 8px 12px;
+    margin: 5px;
+}
+
+.controls label {
+    margin-left: 15px;
+}
+
+/*MOOD BOARD*/
+
+/* Center the mood board */
+.mood-board {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Style the mood image */
+#mood-board img {
+    width: 400px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 10px;
+    transition: opacity 0.5s ease;
+}
+
+/* Style buttons container */
+.mood-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* Style each button */
+.mood-buttons button {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.mood-buttons button:hover {
+    background-color: #2980b9;
+}
+
+/* Fade animation for mood changes */
+.fade {
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* VIEWER RATING */
+.star-rating {
+    display: flex;
+    cursor: pointer;
+}
+
+.star-rating span {
+    font-size: 2em; /* Adjust size as needed */
+    color: gray; /* Default color */
+}
+
+.star-rating span:hover,
+.star-rating span.selected {
+    color: gold; /* Highlight color for selected */
+}

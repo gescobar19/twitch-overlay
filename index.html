@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Quotes Slideshow</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="rating-overlay" class="overlay">
+        <h2>Ratings</h2>
+        <div id="streamer-rating">
+            <h3>Streamer Rating</h3>
+            <div id="streamer-stars" class="star-rating">
+                <span onclick="setStreamerRating(1)">★</span>
+                <span onclick="setStreamerRating(2)">★</span>
+                <span onclick="setStreamerRating(3)">★</span>
+                <span onclick="setStreamerRating(4)">★</span>
+                <span onclick="setStreamerRating(5)">★</span>
+            </div>
+            <p id="streamer-rating-value">Rating: 0/5</p>
+        </div>
+    
+        <div id="viewer-rating" class="top-right">
+            <h3>Viewer Ratings</h3>
+            <div id="viewer-stars" class="star-rating">
+                <span onclick="setViewerRating(1)">★</span>
+                <span onclick="setViewerRating(2)">★</span>
+                <span onclick="setViewerRating(3)">★</span>
+                <span onclick="setViewerRating(4)">★</span>
+                <span onclick="setViewerRating(5)">★</span>
+            </div>
+            <p id="viewer-rating-value">Average Viewer Rating: 0/5</p>
+        </div>
+    </div>
+    
+    <div id="quote-overlay" class="overlay">
+        <div id="quote-display" class="quote">
+            <p id="quote-text">Enter a quote to start the slideshow!</p>
+            <p id="quote-author"></p>
+        </div>
+    </div>
+
+    <div id="controls" class="controls">
+        <input type="text" id="quote-input" placeholder="Enter a quote" />
+        <input type="text" id="author-input" placeholder="Enter author" />
+        <button onclick="addQuote()">Add Quote</button>
+        
+        <button onclick="prevQuote()">Previous</button>
+        <button onclick="nextQuote()">Next</button>
+        
+        <label>
+            <input type="checkbox" id="auto-rotate" checked>
+            Auto-Rotate (20s)
+        </label>
+    </div>
+    
+    <!-- Mood Board Display -->
+    <div id="mood-board" class="mood-board">
+        <!-- Mood image that will change based on selected mood -->
+        <img id="current-mood" src="path/to/default-image.jpg" alt="Mood Display" />
+    </div>
+
+    <!-- Mood Control Buttons -->
+    <div id="mood-buttons" class="mood-buttons">
+        <button onclick="changeMood('suspense')">Suspense</button>
+        <button onclick="changeMood('romance')">Romance</button>
+        <button onclick="changeMood('mystery')">Mystery</button>
+        <!-- Add more buttons as needed -->
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
